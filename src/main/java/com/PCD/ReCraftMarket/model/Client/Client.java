@@ -40,16 +40,16 @@ public class Client {
 
        @OneToMany(mappedBy = "publisher")
        @JsonIgnore
-       private List<Post> postsList = new ArrayList<>();
+       private List<Post> postsList ;
 
 
         @ManyToMany
         @JoinTable(name = "likesList", joinColumns = @JoinColumn(name = "idClient"), inverseJoinColumns = @JoinColumn(name = "idPost"))
         @JsonIgnore
-        private List<Post> LikedPosts = new ArrayList<>();
+        private List<Post> LikedPosts ;
 
         @ManyToMany
         @JoinTable(name = "favouriteList", joinColumns = @JoinColumn(name = "idClient"), inverseJoinColumns = @JoinColumn(name = "idPost"))
         @JsonIgnore
-        private List<Post> favouritePosts = new ArrayList<>();
+        private List<Post> favouritePosts ;
 }

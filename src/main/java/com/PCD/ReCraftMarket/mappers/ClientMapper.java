@@ -12,6 +12,8 @@ public class ClientMapper {
                 .email(clientRequest.getEmail())
                 .roles(clientRequest.getRoles())
                 .address(clientRequest.getAddress())
+                .password(clientRequest.getPassword())
+                .imageClient(clientRequest.getImageClient())
                 .build();
     }
 
@@ -21,6 +23,7 @@ public class ClientMapper {
                 .email(client.getEmail())
                 .roles(client.getRoles())
                 .address(client.getAddress())
+                .imageClient(client.getImageClient())
                 .build();
     }
 }

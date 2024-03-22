@@ -24,14 +24,15 @@ public class Post {
     private Number price;
     private String category;
     private Date targetDate;
-    private boolean isDone; // if the product is sold or not
+    private Number points;
+    private boolean isDone; // the product is sold or not
    // @ElementCollection(fetch = FetchType.LAZY)
     @OneToMany(mappedBy = "commentPost")
     @JsonIgnore
-    private List<Comment> comments = new ArrayList<>();
+    private List<Comment> comments ;
     @OneToMany(mappedBy = "post")
     @JsonIgnore
-    private List<ImagePost> imagePostList = new ArrayList<>();
+    private List<ImagePost> imagePostList ;
 
     @ManyToOne
     @JoinColumn(name="idClient")
@@ -41,11 +42,11 @@ public class Post {
 
     @ManyToMany(mappedBy = "LikedPosts")
     @JsonIgnore
-    private List<Client> loversList=new ArrayList<>();
+    private List<Client> loversList;
 
     @ManyToMany(mappedBy = "favouritePosts")
     @JsonIgnore
-    private List<Client> wantersList = new ArrayList<>();
+    private List<Client> wantersList ;
 /*
     @Override
     public int hashCode() {

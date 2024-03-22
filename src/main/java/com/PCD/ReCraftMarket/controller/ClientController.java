@@ -19,11 +19,13 @@ public class ClientController {
     private final ClientServices clientServices;
 
     public ClientController(ClientServices clientServices) {
+
         this.clientServices = clientServices;
     }
-    @PostMapping
+    @PostMapping("/createAccount")
     @ResponseStatus(HttpStatus.CREATED)
     public void createClient(@RequestBody ClientRequest clientRequest){
+
         clientServices.createClient(clientRequest);
     }
     //@ApiOperation(value = "Get example data", notes = "This endpoint retrieves example data.")

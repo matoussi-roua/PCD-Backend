@@ -29,6 +29,7 @@ public class ClientServices {
             client.setEmail(clientRequest.getEmail());
             client.setRoles(clientRequest.getRoles());
             client.setAddress(clientRequest.getAddress());
+            client.setImageClient(clientRequest.getImageClient());
             return(clientRepository.save(client));
         } else {
             throw new RuntimeException("Client not found with ID: " + clientId);

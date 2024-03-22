@@ -1,2 +1,2 @@
 # PCD-Backend
-a springboot project usint jwt , websocket and dto 
+a springboot project using jwt , websocket and dto 
